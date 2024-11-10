@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./imagenes/logo.ico">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="styles_carrito.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">VIVA LA COMIDA</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./sobre_nosotros.html">Nosotros</a></li>
+                <li><a href="./tienda.html">Tienda</a></li>
+                <li><a href="./login.html" class="signup">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor del carrito -->
+    <section class="cart-container">
+        <h1>Tu Carrito de Compras</h1>
+
+        <!-- Productos en el carrito -->
+        <div class="cart-items">
+            <!-- Producto 1 -->
+            <div class="cart-item">
+                <img src="./imagenes/image1.png" alt="Producto 1">
+                <div class="item-details">
+                    <h3>Receta 1</h3>
+                </div>
+                <div class="item-price">
+                    <p>1.5€</p>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="cart-item">
+                <img src="./imagenes/image2.png" alt="Producto 2">
+                <div class="item-details">
+                    <h3>Receta 2</h3>
+                </div>
+                <div class="item-price">
+                    <p>5.0€</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumen del carrito -->
+        <div class="cart-summary">
+            <h2>Resumen del pedido</h2>
+            <p>Subtotal: 6.5€</p>
+            <p>Gastos de gestión: 2.0€</p>
+            <h3>Total: 8.5€</h3>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </section>
+
+</body>
+</html>

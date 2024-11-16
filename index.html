@@ -21,6 +21,7 @@
                 <li><a href="./tienda.html">Tienda</a></li>
                 <li><a href="./login.html" class="signup">Log In</a></li>
             </ul>
+            <button class="mute-button" id="muteButton">🔈 Silenciar música</button>
         </nav>
     </header>
 
@@ -45,11 +46,16 @@
             <img src="./imagenes/imagencocinero.png" alt="Imagen Chef">
         </div>
     </section>
-
+    <!-- Video/audio -->
     <div class="video">
         <video style="border: 7px ridge black;" poster="./imagenes/logo.ico" width="740" height="360" controls muted>
             <source src="./imagenes/video.mp4" type="video/mp4">
         </video>
+    </div>
+    <div>
+        <audio id="backgroundAudio" autoplay loop controls>
+            <source src="./imagenes/audio.mp3" type="audio/mpeg">
+        </audio>
     </div>
     <!-- Redes sociales -->
     <footer class="social-media">
@@ -90,6 +96,8 @@
                 src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
                 style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
                 src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

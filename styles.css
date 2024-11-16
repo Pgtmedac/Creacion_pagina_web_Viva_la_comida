@@ -142,10 +142,31 @@ img {
     margin-right: 150px;
 }
 
-/* Redes sociales */
+/* Video*/
 .video{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+}
+
+/* Audio*/
+audio {
+    display: none;
+}
+
+/* Estilo del botón */
+.mute-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.mute-button:hover {
+    background-color: #2980b9;
 }

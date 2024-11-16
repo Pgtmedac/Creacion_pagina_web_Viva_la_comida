@@ -141,3 +141,11 @@ img {
     margin-left: 150px;
     margin-right: 150px;
 }
+
+/* Redes sociales */
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}

@@ -170,3 +170,106 @@ audio {
 .mute-button:hover {
     background-color: #2980b9;
 }
+/* Contenedor del slider */
+.slider-container {
+    position: relative;
+    width: 900px; /* Más ancho para aspecto banner */
+    height: 250px; /* Altura reducida para aspecto banner */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 950px) {
+    .slider-container {
+        width: 95%;
+        height: 200px;
+    }
+}
+
+/* Slider */
+.slider {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation: slide 20s infinite;
+}
+
+/* Slides individuales */
+.slide {
+    width: 25%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción cubriendo el espacio */
+    object-position: center 25%; /* Centra la imagen y la posiciona un poco arriba */
+}
+
+/* Animación del slider */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    45% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    70% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-75%);
+    }
+    95% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Pausar animación al hover (opcional) */
+.slider:hover {
+    animation-play-state: paused;
+}
+
+
+/* Animación para la sección principal */
+.main-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Definición de la animación */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustar la animación para el texto y la imagen por separado */
+.content-text {
+    animation: fadeInUp 1s ease-out;
+}
+
+.content-image {
+    animation: fadeInUp 1s ease-out 0.3s; /* Retraso de 0.3s para efecto escalonado */
+    animation-fill-mode: backwards; /* Mantiene el estado inicial hasta que comience la animación */
+}

@@ -1,4 +1,4 @@
-
+//Boton música
 const muteButton = document.getElementById('muteButton');
 const backgroundAudio = document.getElementById('backgroundAudio');
 

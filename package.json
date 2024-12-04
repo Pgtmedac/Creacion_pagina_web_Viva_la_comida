@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "sass stylesass.sass stylesass.css",
     "build": "your_build_process_here",
-    "postinstall": "cp -r node_modules/bootstrap/dist /public/bootstrap"
+    "postinstall": "mkdir -p public/bootstrap && cp -r node_modules/bootstrap/dist public/bootstrap"
   },
   "keywords": ["tienda", "utensilios", "cocina"],
   "author": "",

@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass stylesass.sass stylesass.css",
-    "build": "your_build_process_here",
-    "postinstall": "mkdir -p public/bootstrap && cp -r node_modules/bootstrap/dist public/bootstrap"
+    "build-css": "sass stylesass.sass stylesass.css"
   },
   "keywords": ["tienda", "utensilios", "cocina"],
   "author": "",

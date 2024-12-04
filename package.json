@@ -1,8 +1,17 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.3.3"
-  },
+  "name": "viva-la-comida-utensilios",
+  "version": "1.0.0",
+  "description": "Tienda de utensilios de cocina",
+  "main": "index.js",
   "scripts": {
-  "build-css": "sass stylesass.sass stylesass.css"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass stylesass.sass stylesass.css"
+  },
+  "keywords": ["tienda", "utensilios", "cocina"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "@popperjs/core": "^2.11.8"
   }
 }

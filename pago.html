@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesass.css">
+    <title>VIVA LA COMIDA - Plataforma de Pago</title>
+    <link rel="stylesheet" href="./public/bootstrap.css">
+    <style>
+        .progress-step {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .progress-step.active {
+            background: #000;
+            color: white;
+        }
+        .progress-line {
+            flex: 1;
+            height: 2px;
+            background: #ddd;
+            margin: 0 15px;
+        }
+        .step-text {
+            position: absolute;
+            top: 100%;
+            margin-top: 8px;
+            font-size: 14px;
+            width: max-content;
+        }
+        .payment-summary {
+            position: sticky;
+            top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar">
+            <div class="logo">VIVA LA COMIDA</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./sobre_nosotros.html">Nosotros</a></li>
+                <li><a href="./tienda.html">Tienda</a></li>
+                <li><a href="./tienda_utensilios.html">Utensilios</a></li>
+                <li><a href="./login.html" class="signup">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Finalizar Compra</h1>
+
+        <!-- Progreso -->
+        <div class="d-flex justify-content-center align-items-center mb-5">
+            <div class="progress-step active">
+                1
+                <span class="step-text">Datos</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                2
+                <span class="step-text">Pago</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                3
+                <span class="step-text">Confirmación</span>
+            </div>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="row g-4">
+            <!-- Columna del formulario -->
+            <div class="col-lg-8">
+                <!-- Datos de facturación -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="card-title mb-4">Datos de Facturación</h2>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control form-control-lg" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control form-control-lg" placeholder="Email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control form-control-lg" placeholder="Teléfono" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control form-control-lg" placeholder="Dirección" required>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control form-control-lg" placeholder="Ciudad" required>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control form-control-lg" placeholder="Código Postal" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Método de pago -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h2 class="card-title mb-4">Método de Pago</h2>
+                        
+                        <div class="mb-4">
+                            <div class="form-check border rounded p-3 mb-3">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="card" checked>
+                                <label class="form-check-label d-flex align-items-center" for="card">
+                                    <i class="fas fa-credit-card me-2"></i>
+                                    Tarjeta de Crédito/Débito
+                                </label>
+                            </div>
+                            <div class="form-check border rounded p-3 mb-3">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                <label class="form-check-label d-flex align-items-center" for="paypal">
+                                    <i class="fab fa-paypal me-2"></i>
+                                    PayPal
+                                </label>
+                            </div>
+                            <div class="form-check border rounded p-3">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="bizum">
+                                <label class="form-check-label d-flex align-items-center" for="bizum">
+                                    <i class="fas fa-mobile-alt me-2"></i>
+                                    Bizum
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Campos de tarjeta -->
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control form-control-lg" placeholder="Número de tarjeta" required>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control form-control-lg" placeholder="Nombre en la tarjeta" required>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control form-control-lg" placeholder="MM/AA" required>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control form-control-lg" placeholder="CVV" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna del resumen -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm border-0 payment-summary">
+                    <div class="card-body p-4">
+                        <h2 class="card-title mb-4">Resumen del Pedido</h2>
+                        
+                        <!-- Items -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="./imagenes/image1.png" alt="Receta 1" class="rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                <div class="ms-3 flex-grow-1">
+                                    <h6 class="mb-0">Receta 1</h6>
+                                    <span class="text-muted">1.5€</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="./imagenes/image2.png" alt="Receta 2" class="rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                <div class="ms-3 flex-grow-1">
+                                    <h6 class="mb-0">Receta 2</h6>
+                                    <span class="text-muted">5.0€</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Totales -->
+                        <div class="border-top pt-3 mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal:</span>
+                                <span>6.5€</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Gastos de gestión:</span>
+                                <span>2.0€</span>
+                            </div>
+                            <div class="d-flex justify-content-between fw-bold fs-5 mt-3">
+                                <span>Total:</span>
+                                <span>8.5€</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-dark w-100 py-3" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                            Proceder al Pago
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="paymentModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-body text-center p-5">
+                    <div class="display-1 text-success mb-3">✓</div>
+                    <h3 class="mb-3">¡Pago Realizado con Éxito!</h3>
+                    <p class="text-muted mb-4">Tu pedido ha sido procesado correctamente.</p>
+                    <div class="bg-light rounded p-3 mb-4">
+                        <div class="d-flex justify-content-between">
+                            <span>Número de pedido:</span>
+                            <span class="fw-bold">#VLC-2024-001</span>
+                        </div>
+                    </div>
+                    <a href="./index.html" class="btn btn-dark px-4 py-2">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

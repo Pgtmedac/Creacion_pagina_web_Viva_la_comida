@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./imagenes/logo.ico">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="stylesass.css">
 </head>
@@ -22,17 +23,40 @@
         </nav>
     </header>
 
-    <main class="login-container">
-        <div class="login-box">
-            <h2>Inicio de sesión</h2>
-            <form action="/login" method="POST">
-                <input type="email" name="email" placeholder="Correo" required>
-                <input type="password" name="password" placeholder="Contraseña" required>
-                <button type="submit">Iniciar sesión</button>
-                <a href="./crear_cuenta.html">¿No tienes cuenta?</a>
-            </form>
-        </div>
-    </main>
+    <!-- Contenedor principal del login -->
+    <div class="min-vh-100 d-flex align-items-center justify-content-center py-5">
+        <div class="card border-0 shadow-sm" style="width: 400px;">
+            <div class="card-body p-4 p-md-5">
+                <h2 class="card-title text-center mb-4">Inicio de sesión</h2>
+                
+                <!-- Formulario login-->
+                <form>
+                    <div class="mb-4">
+                        <input type="email" class="form-control form-control-lg py-3" 
+                               placeholder="Correo" required>
+                    </div>
+                    <div class="mb-4">
+                        <input type="password" class="form-control form-control-lg py-3" 
+                               placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 py-3 mb-4">
+                        Iniciar sesión
+                    </button>
 
+                    <!-- Link a Crear Cuenta -->
+                    <div class="text-center">
+                        <a href="./crear_cuenta.html" class="text-decoration-none">
+                            ¿No tienes cuenta?
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
+    <!-- Bootstrap -->
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

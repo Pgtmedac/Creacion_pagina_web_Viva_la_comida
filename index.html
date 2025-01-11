@@ -13,36 +13,35 @@
 
     <!-- Navegación -->
     <header>
-        <nav class="navbar">
-            <div class="logo">VIVA LA COMIDA</div>
-            <ul class="nav-links">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./sobre_nosotros.html">Nosotros</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./tienda_utensilios.html">Utensilios</a></li>
-                <li><a href="./login.html" class="signup">Log In</a></li>
-            </ul>
-            <button class="mute-button" id="muteButton">🔈 Silenciar música</button>
-        </nav>
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="logo">VIVA LA COMIDA</div>
+    <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="./index.html">Inicio</a></li>
+        <li role="none"><a role="menuitem" href="./sobre_nosotros.html">Nosotros</a></li>
+        <li role="none"><a role="menuitem" href="./tienda.html">Tienda</a></li>
+        <li role="none"><a role="menuitem" href="./tienda_utensilios.html">Utensilios</a></li>
+        <li role="none"><a role="menuitem" href="./login.html" class="signup">Log In</a></li>
+    </ul>
+    <button class="mute-button" id="muteButton" aria-pressed="false" aria-label="Silenciar música">🔈 Silenciar música</button>
+</nav>
     </header>
 
     <!-- Sección de imágenes destacadas -->
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide">
-                <img src="./imagenes/image1.png" alt="Imagen 1">
-            </div>
-            <div class="slide">
-                <img src="./imagenes/image2.png" alt="Imagen 2">
-            </div>
-            <div class="slide">
-                <img src="./imagenes/image3.png" alt="Imagen 3">
-            </div>
-            <div class="slide">
-                <img src="./imagenes/image4.png" alt="Imagen 4">
-            </div>
-        </div>
+    <div class="slider">
+    <div class="slide">
+        <img src="./imagenes/image1.png" alt="Una deliciosa paella recién servida">
     </div>
+    <div class="slide">
+        <img src="./imagenes/image2.png" alt="Un grupo de amigos disfrutando una cena">
+    </div>
+    <div class="slide">
+        <img src="./imagenes/image3.png" alt="Ingredientes frescos preparados para una receta">
+    </div>
+    <div class="slide">
+        <img src="./imagenes/image4.png" alt="Un chef sonriente en la cocina">
+    </div>
+</div>
+
     
     <!-- Sección principal -->
     <section class="main-content">
